@@ -17,6 +17,14 @@ const imgs = [
 
 let imgIndex = 0;
 
+function parseIndex(index) {
+  if (index > imgs.length - 1) {
+    return 0;
+  } else if (index < 0) {
+    return imgs.length - 1;
+  }
+  return index;
+}
 nextBtn.addEventListener("click", () => {
   imgIndex++;
   imgIndex = parseIndex(imgIndex);
@@ -28,12 +36,16 @@ prevBtn.addEventListener("click", () => {
   imgIndex = parseIndex(imgIndex);
   mainFrame.src = imgs[imgIndex].src;
 });
-
-function parseIndex(index) {
-  if (index > imgs.length - 1) {
-    return 0;
-  } else if (index < 0) {
-    return imgs.length - 1;
-  }
-  return index;
+for (let i = 0; i <= imgs.length - 1; i++) {
+  const dot = document.createElement("div");
+  dot.setAttribute("class", "dots");
+  dot.setAttribute("data-index", i);
+  dotsContainer.appendChild(dot);
 }
+
+dotsContainer.addEventListener("click", (e) => {
+  if (!e.target.className.includes("dots")) return;
+  imgIndex = +e.target.dataset.index;
+  console.log(imgIndex);
+  mainFrame.src = imgs[imgIndex].src;
+});
