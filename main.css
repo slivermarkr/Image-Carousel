@@ -16,9 +16,17 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 0.5rem;
 }
 
 .dotsContainer {
   display: flex;
   gap: 3px;
+}
+.imgContainer {
+  border: 3px dotted black;
+}
+.sliding {
+  background-color: brown;
+  color: white;
 }

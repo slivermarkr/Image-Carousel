@@ -66,11 +66,11 @@ dotsContainer.addEventListener("click", (e) => {
 slide.addEventListener("click", () => {
   if (slide.className.includes("sliding")) {
     slide.classList.remove("sliding");
-    slide.textContent = "Start Slideshow";
+    slide.textContent = "Slideshow";
     clearInterval(intervalId);
   } else {
     slide.classList.add("sliding");
-    slide.textContent = "Stop Slideshow";
+    slide.textContent = "Stop";
     intervalId = setInterval(() => {
       imgIndex++;
       imgIndex = parseIndex(imgIndex);
