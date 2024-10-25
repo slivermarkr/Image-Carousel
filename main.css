@@ -1,0 +1,16 @@
+.dots {
+  width: 20px;
+  height: 20px;
+  background-color: black;
+  border-radius: 16px;
+}
+
+.dots:hover {
+  background-color: rgb(105, 103, 103);
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
