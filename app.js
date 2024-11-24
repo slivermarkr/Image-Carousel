@@ -17,6 +17,7 @@ const imgs = [
 
 let imgIndex = 0;
 let intervalId = null;
+
 function parseIndex(index) {
   if (index > imgs.length - 1) {
     return 0;
@@ -25,6 +26,7 @@ function parseIndex(index) {
   }
   return index;
 }
+
 function highlightDot(index) {
   dotsContainer
     .querySelectorAll(".dots")
@@ -48,6 +50,7 @@ prevBtn.addEventListener("click", () => {
   highlightDot(imgIndex);
   mainFrame.src = imgs[imgIndex].src;
 });
+
 for (let i = 0; i <= imgs.length - 1; i++) {
   const dot = document.createElement("div");
   dot.setAttribute("class", "dots");

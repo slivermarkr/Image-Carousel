@@ -4,26 +4,31 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Image Carousel</title>
+    <link rel="stylesheet" href="./reset.css" />
     <link rel="stylesheet" href="./main.css" />
   </head>
   <body>
     <div class="container">
       <div class="btnGrp">
-        <button class="prev">prev</button>
-        <button class="next">next</button>
+        <a class="prev btn">&#8249;</a>
       </div>
-      <div class="imgContainer">
-        <img
-          style="width: 500px; height: 500px"
-          id="mainFrame"
-          src="./imgs/img1.jpeg"
-          alt=""
-        />
+      <div class="flex-item">
+        <div class="imgContainer">
+          <img
+            style="width: 500px; height: 500px"
+            id="mainFrame"
+            src="./imgs/img1.jpeg"
+            alt=""
+          />
+        </div>
+        <div class="dotsContainer">
+          <!-- <div class="dots"></div> -->
+        </div>
+        <button class="slide">Slideshow</button>
       </div>
-      <div class="dotsContainer">
-        <!-- <div class="dots"></div> -->
+      <div class="btnG">
+        <a class="next btn">&#8250;</a>
       </div>
-      <button class="slide">Slideshow</button>
     </div>
     <script src="app.js"></script>
   </body>
