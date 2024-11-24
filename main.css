@@ -8,9 +8,10 @@
   background-color: rgb(105, 103, 103);
 }
 .dots-hl {
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
   background-color: rgb(105, 103, 103);
+  transform: translateY(2px);
 }
 .container {
   display: flex;
@@ -29,8 +30,14 @@
   border-radius: 36px;
 }
 .sliding {
-  background-color: brown;
+  background-color: black;
   color: white;
+  outline: none;
+}
+.slide {
+  color: black;
+  background-color: white;
+  outline: none;
 }
 
 .container {
